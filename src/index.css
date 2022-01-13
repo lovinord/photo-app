@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Oxygen:wght@400&display=swap);
+body {
+  margin: 0;
+  background: #fff7f9;
+  font-family: "Oxygen", sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

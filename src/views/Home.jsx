@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles/styleAssets";
-import heroImage from "../assets/images/hero.jpg";
+import heroImage from "../assets/images/heroTest.jpg";
 import { useAuthContext } from "../contexts/AuthContext";
 
 const Home = () => {
@@ -18,9 +18,10 @@ const Home = () => {
       <HeroImageWrapper>
         <HeroOverlay>
           <div>
-            <p>
-              Present <span> your vision</span> in <br />a professional way.
-            </p>
+            <h1>
+              Present your vision <br /> in a professional
+              <br /> way.
+            </h1>
             {!currentUser && (
               <GetStartedButton onClick={goToCreateAccount}>
                 Get started
@@ -35,81 +36,91 @@ const Home = () => {
 };
 
 const HeroImageWrapper = styled.div`
-  position: relative;
-  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 `;
 
 const HeroImage = styled.img`
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  object-position: 35% 15%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: 15% 80%;
   z-index: -1;
+
+  @media (min-width: 768px) {
+    object-position: 90% 25%;
+  }
+
+  @media (min-width: 1024px) {
+    object-position: 100% 36%;
+  }
 `;
 
 const HeroOverlay = styled.div`
   position: absolute;
   z-index: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
 
   div {
-    width: 210px;
-    position: absolute;
-    top: 57%;
-    left: 15vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    padding: 15px;
 
     @media (min-width: 768px) {
-      height: 65vh;
-      width: 320px;
     }
 
     @media (min-width: 1024px) {
-      top: 15%;
-      left: 45vw;
-      width: 600px;
     }
   }
 
-  p {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: white;
-    margin-bottom: 20px;
+  h1 {
+    font-family: Space Grotesk;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #f1efeb;
+    position: relative;
+    left: 3%;
 
     @media (min-width: 768px) {
-      font-size: 1.2rem;
-      margin-bottom: 50px;
+      font-size: 1.6rem;
+      left: 5%;
     }
 
     @media (min-width: 1024px) {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       letter-spacing: 5px;
+      left: 7%;
     }
 
     span {
-      background: #f50057;
       color: white;
-      padding: 2px 4px 2px 6px;
-      border-radius: 25px;
 
       @media (min-width: 768px) {
-        padding: 2px 8px 4px 10px;
       }
     }
   }
 `;
 
 const GetStartedButton = styled(Button)`
-  width: 140px;
-  padding: 10px;
-  border-radius: 25px;
-  font-size: 0.9rem;
+  position: relative;
+  margin: 0 auto;
+  top: 40px;
+  width: 180px;
+  height: 50px;
+  padding: 20px;
+  font-size: 1rem;
   letter-spacing: 1.3px;
 
   @media (min-width: 768px) {
-    width: 160px;
+    width: 180px;
     font-size: 1rem;
     letter-spacing: 2px;
   }

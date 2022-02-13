@@ -106,6 +106,7 @@ const ImageUpload = ({ setOpen }) => {
               display: "flex",
               flexDirection: "column",
               width: "80%",
+              alignItems: "center",
             }}
           >
             {image ? (
@@ -116,22 +117,28 @@ const ImageUpload = ({ setOpen }) => {
             ) : (
               <p style={{ margin: "15px 0px 15px 0px" }}>Choose an image</p>
             )}
-            <input type="file" id="inputFile" onChange={handleFileChange} />
+            <input
+              type="file"
+              id="inputFile"
+              onChange={handleFileChange}
+              style={{ margin: "0 auto" }}
+            />
             <br />
-
-            <br />
-            {uploadProgress && <p>Uploading... {uploadProgress} % </p>}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                width: "100%",
-                margin: "0 auto",
-              }}
-            >
-              <UploadBtn type="submit">Upload</UploadBtn>
-              <ClearBtn type="reset">Clear</ClearBtn>
-            </div>
+            {uploadProgress ? (
+              <p>Uploading... {uploadProgress} % </p>
+            ) : (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  margin: "0 auto",
+                }}
+              >
+                <UploadBtn type="submit">Upload</UploadBtn>
+                <ClearBtn type="reset">Clear</ClearBtn>
+              </div>
+            )}
           </form>
         </Modal>
       </OverLay>
@@ -157,7 +164,8 @@ const Modal = styled.div`
   position: absolute;
   top: 150px;
   z-index: 4;
-  background: #fffafb;
+  background: #f1efeb;
+  color: #11123b;
   border-radius: 8px;
   width: 85%;
   height: 35%;

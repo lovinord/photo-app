@@ -30,7 +30,10 @@ const CreateNewAlbumModal = ({ setOpen }) => {
     <>
       <OverLay>
         <Modal>
-          <h2 onClick={() => setOpen(false)} style={{ padding: "10px" }}>
+          <h2
+            onClick={() => setOpen(false)}
+            style={{ padding: "10px", cursor: "pointer" }}
+          >
             X
           </h2>
 
@@ -68,17 +71,20 @@ const Modal = styled.div`
   position: absolute;
   top: 150px;
   z-index: 4;
-  background: #fffafb;
+  background: #f1efeb;
+  color: #11123b;
   border-radius: 8px;
   width: 85%;
   height: 33%;
 
   @media (min-width: 768px) {
     width: 75%;
+    height: 43%;
   }
 
   @media (min-width: 1024px) {
     width: 30%;
+    height: 38%;
   }
 `;
 

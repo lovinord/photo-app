@@ -90,7 +90,8 @@ const Modal = styled.div`
   position: absolute;
   top: 150px;
   z-index: 4;
-  background: #fffafb;
+  background: #f1efeb;
+  color: #11123b;
   border-radius: 8px;
   width: 85%;
   height: 35%;
@@ -102,7 +103,7 @@ const Modal = styled.div`
   margin: 60px;
 
   @media (min-width: 768px) {
-    width: 55%;
+    width: 50%;
   }
 
   @media (min-width: 1024px) {

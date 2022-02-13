@@ -64,8 +64,8 @@ const CreateNewAlbumFromPhotosModal = ({ albumId, setOpen, markedImages }) => {
             alignItems: "center",
           }}
         >
-          <label>Album title:</label>
           <Input
+            style={{ width: "300px" }}
             type="text"
             placeholder="What is the album called?"
             ref={inputTitle}
@@ -92,13 +92,15 @@ const OverLay = styled.div`
 `;
 
 const Modal = styled.div`
+  background: #f1efeb;
+  color: #11123b;
   position: absolute;
   top: 150px;
   z-index: 4;
   background: #fffafb;
   border-radius: 8px;
   width: 85%;
-  height: 35%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -107,7 +109,8 @@ const Modal = styled.div`
   padding: 60px;
 
   @media (min-width: 768px) {
-    width: 75%;
+    width: 50%;
+    height: 35%;
   }
 
   @media (min-width: 1024px) {
@@ -122,11 +125,9 @@ const Create = styled(Button)`
   margin: 20px;
 
   @media (min-width: 768px) {
-    width: 75%;
   }
 
   @media (min-width: 1024px) {
-    width: 40%;
   }
 `;
 

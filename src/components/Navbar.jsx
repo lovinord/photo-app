@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCameraRetro } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const { signout, currentUser } = useAuthContext();
@@ -13,10 +15,12 @@ const Navbar = () => {
     navigate("/");
   };
 
+  const navIcon = <FontAwesomeIcon icon={faCameraRetro} />;
+
   return (
     <NavWrapper>
       <Link to="/">
-        <LinkText>ShareVision</LinkText>
+        <LinkText style={{ fontSize: "35px" }}>{navIcon}</LinkText>
       </Link>
       <LoginSignupWrapper>
         {!currentUser ? (
@@ -43,12 +47,14 @@ const Navbar = () => {
 
 const NavWrapper = styled.div`
   width: 100%;
-  height: 60px;
-  background: #f50057;
-  padding: 10px;
+  height: 65px;
+  background: #11123b;
+  padding: 7px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Space Grotesk;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 `;
 
 const LoginSignupWrapper = styled.div`
@@ -57,10 +63,16 @@ const LoginSignupWrapper = styled.div`
 `;
 
 const LinkText = styled.p`
-  font-size: 1rem;
-  color: white;
+  font-size: 0.9rem;
+  color: #f1efeb;
   padding: 10px;
   cursor: pointer;
+  font-weight: 500;
+
+  &: hover {
+    color: #373869;
+    transition: 0.5s;
+  }
 `;
 
 const Logout = styled(LinkText)``;

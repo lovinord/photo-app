@@ -69,6 +69,7 @@ const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 45px;
+  height: 400px;
 
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 10px;
@@ -76,10 +77,12 @@ const LoginForm = styled.form`
 
   @media (min-width: 768px) {
     padding: 30px;
+    height: 500px;
   }
 
   @media (min-width: 1024px) {
     padding: 40px;
+    height: 450px;
   }
 `;
 

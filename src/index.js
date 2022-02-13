@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import "lightgallery.js/dist/css/lightgallery.css";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +20,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <SimpleReactLightbox>
+          <App />
+        </SimpleReactLightbox>
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>,

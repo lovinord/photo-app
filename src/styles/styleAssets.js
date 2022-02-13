@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const MenuHeader = styled.h1`
+  font-family: Space Grotesk;
   padding: 2rem;
   font-weight: normal;
   font-size: 1.8rem;
@@ -24,8 +25,8 @@ const InputText = styled.input`
   font-size: 0.9rem;
   padding: 0rem 0.5rem;
   border-radius: 5px;
+  border: none;
   background-color: white;
-  border: 1.5px solid #f50057;
   outline: none;
   display: block;
   transition: all 0.3s;
@@ -45,6 +46,10 @@ const InputText = styled.input`
 `;
 
 const Button = styled.button`
+  background: #373869;
+  color: #f1efeb;
+  font-family: Space Grotesk;
+  font-weight: 400;
   overflow-y: hidden;
   text-align: center;
   text-decoration: none;
@@ -54,23 +59,21 @@ const Button = styled.button`
   align-items: center;
   cursor: pointer;
   border: none;
-  background: #f50057;
-  color: white;
   width: 155px;
   font-size: 18px;
   height: 40px;
   padding: 10px 32px;
-  border-radius: 10px;
+  border-radius: 5px;
 
   &: hover {
-    padding: 10px;
+    background: #060724;
     box-shadow: 2px 2px 10px rgba(0, 0, 0);
     transition: 0.3s;
   }
 
   @media (min-width: 768px) {
-    width: 210px;
-    font-size: 23px;
+    width: 260px;
+    font-size: 21px;
     height: 54px;
   }
 

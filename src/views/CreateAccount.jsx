@@ -76,22 +76,27 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  position: relative;
 `;
 
 const CreateAccountForm = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 45px;
+  height: 490px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 40px;
 
   @media (min-width: 768px) {
     padding: 30px;
+    height: 590px;
   }
 
   @media (min-width: 1024px) {
     padding: 40px;
+    height: 550px;
   }
 `;
 

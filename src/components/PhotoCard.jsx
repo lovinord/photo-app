@@ -131,6 +131,7 @@ const Clone = styled.i`
   margin-left: 10px;
   color: ${(props) => (props.clone ? "#1479FE" : "lightblue")};
   z-index: 1;
+  cursor: pointer;
 
   &: hover {
     color: #1479fe;

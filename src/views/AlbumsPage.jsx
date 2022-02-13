@@ -84,7 +84,7 @@ const AlbumsWrapper = styled.div`
   background: #11123b;
   color: #f1efeb;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   @media (min-width: 768px) {
   }
